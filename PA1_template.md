@@ -1,9 +1,4 @@
----
-title: "Reproducible Research: Peer Assessment 1"
-output: 
-  html_document:
-    keep_md: true
----
+# Reproducible Research: Peer Assessment 1
 
 ## Loading and preprocessing the data
 Show any code that is needed to
@@ -188,7 +183,7 @@ fill_activity_data$date <- as.Date(activity_data$date, format = "%Y-%m-%d")
 weekday_activity <- data.frame( date =fill_activity_data$date, weekday=tolower(weekdays(fill_activity_data$date)), steps = fill_activity_data$steps, interval = fill_activity_data$interval)
 
 ## indicating whether a given date is a weekday or weekend day by adding a "daytype"column
-weekend_activity <- cbind(weekday_activity, daytype = ifelse(test = weekday_activity$weekday=="sábado"| weekday_activity$weekday == "domingo", yes = "weekend", no = "weekday"))
+weekend_activity <- cbind(weekday_activity, daytype = ifelse(test = weekday_activity$weekday=="sÃ¡bado"| weekday_activity$weekday == "domingo", yes = "weekend", no = "weekday"))
 
 ## the new data frame:
 head(weekend_activity)
